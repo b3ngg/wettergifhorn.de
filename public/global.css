@@ -63,6 +63,8 @@ html {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--c-bg);
 }
 
 @media screen and (max-width: 1000px) {
