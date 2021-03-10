@@ -1,6 +1,7 @@
 <header>
   <div class="logo">
     <img src="/assets/logo.svg" alt="Wetter Gifhorn" />
+    <div class="overlay" />
   </div>
   <div class="text">
     <h1>Wetter Gifhorn</h1>
@@ -22,11 +23,23 @@
     border: 0.4rem solid var(--c-grey);
     width: 6.8rem;
     height: 6.8rem;
+    position: relative;
   }
 
   img {
     width: 6rem;
     border-radius: 50%;
+  }
+
+  .overlay {
+    width: 6rem;
+    height: 6rem;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -5px black inset;
   }
 
   .text {
