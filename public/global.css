@@ -1,0 +1,141 @@
+:root {
+  /* Colors */
+  --c-bg: #eeeeee;
+  --c-white: #ffffff;
+  --c-dark-white: #f1f1f1;
+  --c-black: #000000;
+  --c-grey: #363636;
+  --c-blue: #2274a5;
+  --c-soft-blue: #e6f2fa;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+::-moz-selection {
+  background-color: var(--c-bg);
+  color: var(--c-black);
+}
+
+::selection {
+  background-color: var(--c-blue);
+  color: var(--c-white);
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: default;
+  position: relative;
+  height: 100%;
+
+  font: normal 400 20px/1.5 'Lato', sans-serif;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--c-bg);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  height: 100%;
+  font: inherit;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+pre {
+  font-size: inherit;
+  line-height: inherit;
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-black);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+p {
+  color: var(--c-grey);
+  padding: 1rem 0;
+}
