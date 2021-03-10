@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" style="background:#eae0cc">
+  <title>Wetter Gifhorn – Dein Wettter für Gifhorn!</title>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#A0CA92" d="M687.997871,777 L780.02124,777 L705,467 L555,467 L479.97876,777 L573.002129,777 C573.270657,745.473847 598.91046,720 630.5,720 C662.08954,720 687.729343,745.473847 687.997871,777 Z"/>
+    <circle cx="630" cy="467" r="75" fill="#F9C22E"/>
+    <g fill="#2274A5" transform="translate(223 675)">
+      <g transform="translate(58)">
+        <circle cx="15" cy="15" r="15"/>
+        <circle cx="70" cy="15" r="15"/>
+        <circle cx="125" cy="15" r="15"/>
+        <circle cx="180" cy="15" r="15"/>
+        <circle cx="235" cy="15" r="15"/>
+        <circle cx="290" cy="15" r="15"/>
+      </g>
+      <g transform="translate(29 58)">
+        <circle cx="15" cy="15" r="15"/>
+        <circle cx="70" cy="15" r="15"/>
+        <circle cx="125" cy="15" r="15"/>
+        <circle cx="180" cy="15" r="15"/>
+        <circle cx="235" cy="15" r="15"/>
+        <circle cx="290" cy="15" r="15"/>
+      </g>
+      <g transform="translate(0 116)">
+        <circle cx="15" cy="15" r="15"/>
+        <circle cx="70" cy="15" r="15"/>
+        <circle cx="125" cy="15" r="15"/>
+        <circle cx="180" cy="15" r="15"/>
+        <circle cx="235" cy="15" r="15"/>
+        <circle cx="290" cy="15" r="15"/>
+      </g>
+    </g>
+    <path fill="#FFFFFF" d="M621,617 C662.421356,617 696,583.421356 696,542 C696,500.578644 662.421356,467 621,467 C621,384.157288 553.842712,317 471,317 C414.510938,317 365.315047,348.225777 339.731571,394.358087 C333.744247,392.818688 327.467731,392 321,392 C279.578644,392 246,425.578644 246,467 C204.578644,467 171,500.578644 171,542 C171,583.421356 204.578644,617 246,617 L621,617 Z"/>
+    <g transform="rotate(165 445.938 398.866)">
+      <g fill="#A0CA92" transform="translate(75.751 75.344)">
+        <rect width="420" height="20" y="200"/>
+        <rect width="420" height="20" y="200" transform="rotate(-90 210 210)"/>
+      </g>
+      <rect width="180" height="60" x="390.751" y="255.344" fill="#F9C22E"/>
+      <rect width="180" height="60" x=".751" y="255" fill="#F9C22E"/>
+      <rect width="180" height="60" x="195.751" y="60.344" fill="#F9C22E" transform="rotate(-90 285.751 90.344)"/>
+      <rect width="180" height="60" x="195.751" y="450.344" fill="#F9C22E" transform="rotate(-90 285.751 480.344)"/>
+    </g>
+  </g>
+</svg>
