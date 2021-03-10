@@ -31,10 +31,25 @@
 
   .text {
     flex-grow: 0.8;
-    height: 6.6rem;
+  }
+
+  h1 {
+    line-height: 3rem;
   }
 
   span {
     margin-left: 0.4rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    header {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text {
+      margin-top: 1rem;
+      text-align: center;
+    }
   }
 </style>
