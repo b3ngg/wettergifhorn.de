@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--u-padding);
+    padding: 2rem var(--u-padding);
     background: linear-gradient(
       180deg,
       var(--c-white) 0%,
@@ -60,6 +60,7 @@
 
   span {
     margin-left: 0.4rem;
+    color: var(--c-blue);
   }
 
   @media screen and (max-width: 500px) {

@@ -15,7 +15,7 @@
 
 <style>
   .container {
-    padding: var(--u-padding);
+    padding: 2rem var(--u-padding);
     color: var(--c-grey);
     font-size: 0.8rem;
   }
