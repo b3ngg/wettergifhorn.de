@@ -37,11 +37,13 @@
     const scale = 2;
     domtoimage
       .toJpeg(imageRef, {
-        width: imageRef.clientWidth * scale,
-        height: imageRef.clientHeight * scale,
+        height: imageRef.offsetHeight * scale,
+        width: imageRef.offsetWidth * scale,
         style: {
           transform: 'scale(' + scale + ')',
-          transformOrigin: '50% center',
+          transformOrigin: 'top left',
+          width: imageRef.offsetWidth + 'px',
+          height: imageRef.offsetHeight + 'px',
         },
       })
       .then(async (dataUrl) => {
@@ -89,7 +91,6 @@
   }
 
   .frame {
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
