@@ -3,6 +3,7 @@
 
   import Header from './components/Header.svelte';
   import Post from './components/Post.svelte';
+  import Spinner from './components/Spinner.svelte';
 
   let posts = getCollectionAsPosts('d85f75983c61439a87f132323a409d0d');
 </script>
@@ -11,7 +12,7 @@
   <Header />
 
   {#await posts}
-    Lade Posts
+    <Spinner />
   {:then value}
     {#each value as item}
       <Post data={item} />
