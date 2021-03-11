@@ -13,5 +13,6 @@
     font-size: 0.8rem;
     margin-right: 0.4rem;
     margin-bottom: 0.8rem;
+    font-weight: 500;
   }
 </style>
