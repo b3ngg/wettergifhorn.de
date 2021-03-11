@@ -29,19 +29,19 @@
   .logo {
     border-radius: 50%;
     border: 0.4rem solid var(--c-grey);
-    width: 6.8rem;
-    height: 6.8rem;
+    width: 5.8rem;
+    height: 5.8rem;
     position: relative;
   }
 
   img {
-    width: 6rem;
+    width: 5rem;
     border-radius: 50%;
   }
 
   .overlay {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: transparent;
     position: absolute;
     top: 0;
