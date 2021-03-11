@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { showInfo } from './store';
+
   import { getCollectionAsPosts } from './api/notion';
 
   import Header from './components/Header.svelte';
@@ -10,8 +12,6 @@
   let posts = getCollectionAsPosts('d85f75983c61439a87f132323a409d0d');
 
   let id = new URL(window.location.href).searchParams.get('id');
-
-  let showInfo = false;
 </script>
 
 {#if id}
@@ -20,7 +20,7 @@
   <div class="wrapper">
     <Header />
 
-    {#if showInfo}
+    {#if $showInfo}
       <Info />
     {:else}
       {#await posts}
