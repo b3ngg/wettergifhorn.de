@@ -27,5 +27,6 @@
     box-sizing: content-box;
     margin: 0 auto;
     position: relative;
+    padding: 1rem;
   }
 </style>

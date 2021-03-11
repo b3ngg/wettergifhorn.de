@@ -10,7 +10,8 @@
   div {
     background-position: center;
     background-size: cover;
-    height: 16rem;
+    height: 50vw;
+    max-height: 16rem;
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

@@ -12,7 +12,7 @@
 
 <style>
   .container {
-    padding: 2rem;
+    padding: 0.6rem var(--u-padding);
   }
 
   p {

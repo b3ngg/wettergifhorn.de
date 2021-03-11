@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem var(--u-padding);
   }
 
   span {
@@ -36,6 +36,7 @@
 
   .tags {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .tag {
@@ -44,6 +45,22 @@
     padding: 0.05rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
-    margin: 0 0.2rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .right {
+      padding: 0;
+    }
+
+    .tags {
+      margin-top: 0.6rem;
+    }
   }
 </style>
