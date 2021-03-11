@@ -53,6 +53,7 @@ export const getTextBlocksFromPage = (
   pageData: Record<string, any>
 ): Block[] => {
   const content = pageData.content as string[];
+  if (!content) return [{ type: 'text', content: '' }];
 
   return content
     .map((contentId) => {

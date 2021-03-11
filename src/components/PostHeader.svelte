@@ -5,13 +5,15 @@
 </script>
 
 <div class="container">
-  <span class="icon">{icon}</span>
+  <span class="icon">{icon ? icon : '💬'}</span>
   <div class="right">
     <h2>{title}</h2>
     <div class="tags">
-      {#each tags as tag}
-        <div class="tag">{tag}</div>
-      {/each}
+      {#if tags}
+        {#each tags as tag}
+          <div class="tag">{tag}</div>
+        {/each}
+      {/if}
     </div>
   </div>
 </div>
