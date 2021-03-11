@@ -16,6 +16,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--u-padding);
+    background: linear-gradient(
+      180deg,
+      var(--c-white) 0%,
+      var(--c-dark-white) 100%
+    );
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
   }
 
   .logo {
