@@ -1,7 +1,6 @@
 <script lang="ts">
   import domtoimage from 'dom-to-image';
   import { onMount } from 'svelte';
-  import { to_number } from 'svelte/internal';
 
   import { addAdditonalDataToPost, getCollectionAsPosts } from '../api/notion';
 
@@ -45,11 +44,14 @@
           transformOrigin: '50% center',
         },
       })
-      .then(function (dataUrl) {
+      .then(async (dataUrl) => {
         var link = document.createElement('a');
         link.download = 'my-image-name.jpeg';
         link.href = dataUrl;
         link.click();
+
+        await new Promise((r) => setTimeout(r, 400));
+        history.back();
       });
   });
 </script>
@@ -59,7 +61,7 @@
     <div class="container">
       <PostCover {...data} />
       <PostHeader {...data} />
-      {#if textLenght < 500}
+      {#if textLenght < 600}
         <PostBody {...data} />
         <div class="branding">
           <p>Mehr auf wettergifhorn.de</p>
