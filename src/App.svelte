@@ -2,25 +2,32 @@
   import { getCollectionAsPosts } from './api/notion';
 
   import Header from './components/Header.svelte';
+  import ImageGenerator from './components/ImageGenerator.svelte';
   import Post from './components/Post.svelte';
   import Spinner from './components/Spinner.svelte';
 
   let posts = getCollectionAsPosts('d85f75983c61439a87f132323a409d0d');
+
+  let id = new URL(window.location.href).searchParams.get('id');
 </script>
 
-<div class="wrapper">
-  <Header />
+{#if id}
+  <ImageGenerator {id} />
+{:else}
+  <div class="wrapper">
+    <Header />
 
-  {#await posts}
-    <Spinner />
-  {:then value}
-    {#each value as item}
-      <Post data={item} />
-    {/each}
-  {:catch error}
-    Fehler: {error}
-  {/await}
-</div>
+    {#await posts}
+      <Spinner />
+    {:then value}
+      {#each value as item}
+        <Post data={item} />
+      {/each}
+    {:catch error}
+      Fehler: {error}
+    {/await}
+  </div>
+{/if}
 
 <style>
   .wrapper {
