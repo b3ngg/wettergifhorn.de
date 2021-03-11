@@ -7,6 +7,7 @@
   import PostCover from './PostCover.svelte';
   import PostFooter from './PostFooter.svelte';
   import PostHeader from './PostHeader.svelte';
+  import Spinner from './Spinner.svelte';
 
   let visRef;
 
@@ -27,7 +28,9 @@
     <PostFooter {...data} />
   {:else}
     <Inview wrapper={visRef} on:enter={addData}>
-      <div bind:this={visRef}>Lade</div>
+      <div bind:this={visRef}>
+        <Spinner />
+      </div>
     </Inview>
   {/if}
 </div>
