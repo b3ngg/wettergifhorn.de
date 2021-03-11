@@ -20,8 +20,6 @@
   };
 
   export let value: string;
-
-  console.log(colors(value));
 </script>
 
 <div style="color: {colors(value)[0]}; background-color: {colors(value)[1]};">
