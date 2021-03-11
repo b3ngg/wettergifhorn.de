@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import Inview from 'svelte-inview';
   import { addAdditonalDataToPost } from '../api/notion';
 
   import type { Post } from '../api/types';
@@ -8,14 +8,15 @@
   import PostFooter from './PostFooter.svelte';
   import PostHeader from './PostHeader.svelte';
 
+  let visRef;
+
   let complete: boolean = false;
   export let data: Post;
 
-  // TODO: Replace with viewport detection
-  onMount(async () => {
+  const addData = async () => {
     data = await addAdditonalDataToPost(data);
     complete = true;
-  });
+  };
 </script>
 
 <div class="container">
@@ -25,7 +26,9 @@
     <PostBody {...data} />
     <PostFooter {...data} />
   {:else}
-    Lade
+    <Inview wrapper={visRef} on:enter={addData}>
+      <div bind:this={visRef}>Lade</div>
+    </Inview>
   {/if}
 </div>
 
