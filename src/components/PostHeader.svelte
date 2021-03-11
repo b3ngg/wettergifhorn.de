@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 1rem;
+    padding: 0.5rem 2rem;
   }
 
   span {
@@ -41,5 +41,7 @@
     color: var(--c-blue);
     padding: 0.05rem 1rem;
     border-radius: 20px;
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
   }
 </style>
