@@ -18,7 +18,7 @@
   });
 </script>
 
-<div class="post">
+<div class="container">
   {#if complete}
     <PostCover {...data} />
     <PostHeader {...data} />
@@ -28,3 +28,15 @@
     Lade
   {/if}
 </div>
+
+<style>
+  .container {
+    background: linear-gradient(
+      180deg,
+      var(--c-white) 0%,
+      var(--c-dark-white) 100%
+    );
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
+  }
+</style>
