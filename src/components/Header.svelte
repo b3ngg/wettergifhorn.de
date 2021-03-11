@@ -16,30 +16,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem var(--u-padding);
+    background: linear-gradient(
+      180deg,
+      var(--c-white) 0%,
+      var(--c-dark-white) 100%
+    );
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
   }
 
   .logo {
     border-radius: 50%;
-    border: 0.4rem solid var(--c-grey);
-    width: 6.8rem;
-    height: 6.8rem;
+    border: 0.25rem solid var(--c-grey);
+    width: 5.5rem;
+    height: 5.5rem;
     position: relative;
   }
 
   img {
-    width: 6rem;
+    width: 5rem;
     border-radius: 50%;
   }
 
   .overlay {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 50%;
-    box-shadow: 0 0 20px -5px black inset;
+    box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.8) inset;
   }
 
   .text {
@@ -52,6 +60,7 @@
 
   span {
     margin-left: 0.4rem;
+    color: var(--c-blue);
   }
 
   @media screen and (max-width: 500px) {
