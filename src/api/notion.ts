@@ -87,7 +87,9 @@ export const addAdditonalDataToPost = async (post: Post): Promise<Post> => {
     ...post,
     created: new Date(pageData.created_time),
     icon: pageData.format?.page_icon,
-    image: pageData.format?.page_cover,
+    image: pageData.format?.page_cover
+      ? pageData.format?.page_cover + '&w=1400'
+      : undefined,
     blocks: getTextBlocksFromPage(page, pageData),
   };
 };
