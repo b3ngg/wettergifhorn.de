@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Tag from './Tag.svelte';
+
   export let icon: string;
   export let title: string;
   export let tags: string[];
@@ -11,7 +13,7 @@
     <div class="tags">
       {#if tags}
         {#each tags as tag}
-          <div class="tag">{tag}</div>
+          <Tag value={tag} />
         {/each}
       {/if}
     </div>
@@ -37,16 +39,6 @@
   .tags {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .tag {
-    background-color: var(--c-soft-blue);
-    color: var(--c-blue);
-    padding: 0.05rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-right: 0.4rem;
-    margin-bottom: 0.8rem;
   }
 
   @media screen and (max-width: 700px) {
