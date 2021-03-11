@@ -12,11 +12,14 @@
 
 <style>
   .container {
-    padding: 0 2rem;
+    padding: 2rem;
   }
 
   p {
     margin: 0;
     padding: 0.2rem 0;
+    max-width: 30rem;
+    font-weight: 500;
+    font-size: 0.9rem;
   }
 </style>

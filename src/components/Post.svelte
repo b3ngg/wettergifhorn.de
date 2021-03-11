@@ -31,6 +31,11 @@
 
 <style>
   .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4rem 0;
+
     background: linear-gradient(
       180deg,
       var(--c-white) 0%,
