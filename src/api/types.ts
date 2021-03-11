@@ -4,8 +4,8 @@ export type PageResponse = Record<string, Record<string, unknown>>;
 export interface Post {
   id: string;
   title: string;
-  date: Date;
   tags: string[];
+  created?: Date;
   icon?: string;
   image?: string;
   blocks?: Block[];

@@ -6,11 +6,11 @@
   dayjs.locale('de');
   dayjs.extend(relativeTime);
 
-  export let date: Date;
+  export let created: Date;
 </script>
 
 <div class="container">
-  {dayjs(date).fromNow()}
+  {dayjs(created).fromNow()}
 </div>
 
 <style>

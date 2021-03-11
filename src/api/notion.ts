@@ -1,4 +1,4 @@
-import { get, stringToDate } from './helper';
+import { get } from './helper';
 import type { Block, CollectionResponse, PageResponse, Post } from './types';
 
 const ENDPOINT = 'https://notion-api.splitbee.io/v1/';
@@ -36,7 +36,6 @@ export const getCollectionAsPosts = async (id: string): Promise<Post[]> => {
       return {
         id: item.id,
         title: item['Name'],
-        date: stringToDate(item['Date']),
         tags: (item['Tags'] as unknown) as string[],
       };
     }
@@ -83,9 +82,9 @@ export const addAdditonalDataToPost = async (post: Post): Promise<Post> => {
   const page = await getPage(post.id);
   // First page block containing page data
   const pageData = Object.values(page)[0].value as Record<string, any>;
-
   return {
     ...post,
+    created: new Date(pageData.created_time),
     icon: pageData.format?.page_icon,
     image: pageData.format?.page_cover,
     blocks: getTextBlocksFromPage(page, pageData),
