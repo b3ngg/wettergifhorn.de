@@ -28,9 +28,9 @@
 
   .logo {
     border-radius: 50%;
-    border: 0.4rem solid var(--c-grey);
-    width: 5.8rem;
-    height: 5.8rem;
+    border: 0.25rem solid var(--c-grey);
+    width: 5.5rem;
+    height: 5.5rem;
     position: relative;
   }
 
@@ -47,7 +47,7 @@
     top: 0;
     left: 0;
     border-radius: 50%;
-    box-shadow: 0 0 20px -5px black inset;
+    box-shadow: 0 0 20px -8px rgba(0, 0, 0, 0.8) inset;
   }
 
   .text {
