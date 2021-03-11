@@ -7,6 +7,14 @@
   --c-grey: #363636;
   --c-blue: #2274a5;
   --c-soft-blue: #e6f2fa;
+
+  --u-padding: 2rem;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --u-padding: 1rem;
+  }
 }
 
 /* Reset */
