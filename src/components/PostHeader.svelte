@@ -4,7 +4,7 @@
   export let tags: string[];
 </script>
 
-<div class="header">
+<div class="container">
   <span class="icon">{icon}</span>
   <div class="right">
     <h2>{title}</h2>
@@ -15,3 +15,31 @@
     </div>
   </div>
 </div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  span {
+    font-size: 4rem;
+  }
+
+  .right {
+    padding-left: 2rem;
+  }
+
+  .tags {
+    display: flex;
+  }
+
+  .tag {
+    background-color: var(--c-soft-blue);
+    color: var(--c-blue);
+    padding: 0.05rem 1rem;
+    border-radius: 20px;
+  }
+</style>
