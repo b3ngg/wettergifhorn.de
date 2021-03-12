@@ -27,4 +27,14 @@
   firstPost.subscribe((value) => (message = getMessage(value)));
 </script>
 
-<span>{message}</span>
+<div class="container">
+  <span>{message}</span>
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    text-align: center;
+    margin: 0.4rem 0;
+  }
+</style>
