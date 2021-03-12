@@ -26,8 +26,8 @@
       {#await posts}
         <Spinner />
       {:then value}
-        {#each value as item}
-          <Post data={item} />
+        {#each value as item, i}
+          <Post index={i} data={item} />
         {/each}
       {:catch error}
         Fehler: {error}
