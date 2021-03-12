@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { firstPost } from './../store';
+
   import Inview from 'svelte-inview';
   import { addAdditonalDataToPost } from '../api/notion';
 
@@ -13,10 +15,12 @@
 
   let complete: boolean = false;
   export let data: Post;
+  export let index: number;
 
   const addData = async () => {
     data = await addAdditonalDataToPost(data);
     complete = true;
+    if (index === 0) firstPost.set(data);
   };
 </script>
 
