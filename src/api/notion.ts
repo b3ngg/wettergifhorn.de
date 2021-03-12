@@ -31,15 +31,17 @@ export const getPage = async (id: string): Promise<PageResponse> => {
 export const getCollectionAsPosts = async (id: string): Promise<Post[]> => {
   const collection = await getCollection(id);
 
-  return collection.map(
-    (item): Post => {
-      return {
-        id: item.id,
-        title: item['Name'],
-        tags: (item['Tags'] as unknown) as string[],
-      };
-    }
-  );
+  return collection
+    .filter((page) => !page['Draft'])
+    .map(
+      (item): Post => {
+        return {
+          id: item.id,
+          title: item['Name'],
+          tags: (item['Tags'] as unknown) as string[],
+        };
+      }
+    );
 };
 
 /**
