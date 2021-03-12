@@ -37,4 +37,8 @@
     text-align: center;
     margin: 0.4rem 0;
   }
+
+  span {
+    color: var(--c-blue);
+  }
 </style>
