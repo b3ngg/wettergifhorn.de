@@ -48,10 +48,9 @@ export const getCollectionAsPosts = async (id: string): Promise<Post[]> => {
  * @param pageData The first page block containing meta data
  * @returns Array of blocks
  */
-export const getTextBlocksFromPage = (
-  page: PageResponse,
-  pageData: Record<string, any>
-): Block[] => {
+export const getTextBlocksFromPage = (page: PageResponse): Block[] => {
+  const pageData = Object.values(page)[0].value as Record<string, any>;
+
   const content = pageData.content as string[];
   if (!content) return [{ type: 'text', content: '' }];
 
@@ -90,6 +89,6 @@ export const addAdditonalDataToPost = async (post: Post): Promise<Post> => {
     image: pageData.format?.page_cover
       ? pageData.format?.page_cover + '&w=1400'
       : undefined,
-    blocks: getTextBlocksFromPage(page, pageData),
+    blocks: getTextBlocksFromPage(page),
   };
 };

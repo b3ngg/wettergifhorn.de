@@ -1,8 +1,11 @@
 <script lang="ts">
+  import { showInfo } from './store';
+
   import { getCollectionAsPosts } from './api/notion';
 
   import Header from './components/Header.svelte';
   import ImageGenerator from './components/ImageGenerator.svelte';
+  import Info from './components/Info.svelte';
   import Post from './components/Post.svelte';
   import Spinner from './components/Spinner.svelte';
 
@@ -17,15 +20,19 @@
   <div class="wrapper">
     <Header />
 
-    {#await posts}
-      <Spinner />
-    {:then value}
-      {#each value as item}
-        <Post data={item} />
-      {/each}
-    {:catch error}
-      Fehler: {error}
-    {/await}
+    {#if $showInfo}
+      <Info />
+    {:else}
+      {#await posts}
+        <Spinner />
+      {:then value}
+        {#each value as item}
+          <Post data={item} />
+        {/each}
+      {:catch error}
+        Fehler: {error}
+      {/await}
+    {/if}
   </div>
 {/if}
 
