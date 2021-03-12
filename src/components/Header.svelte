@@ -1,5 +1,6 @@
 <script>
   import { showInfo } from './../store';
+  import Health from './Health.svelte';
 </script>
 
 <header>
@@ -10,7 +11,7 @@
   <div class="text">
     <h1>Wetter Gifhorn</h1>
     <!-- TODO: Add health check -->
-    <span>Zuletzt vor zwei Stunden aktualisiert</span>
+    <Health />
   </div>
   <div on:click={() => showInfo.update((value) => !value)} class="info">
     {#if $showInfo}

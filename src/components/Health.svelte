@@ -1,0 +1,30 @@
+<script lang="ts">
+  import type { Post } from '../api/types';
+
+  import { firstPost } from '../store';
+
+  const getMessage = (latestPost: Post): string => {
+    if (latestPost === undefined) return 'Beiträge laden …';
+
+    const currentDate = new Date();
+    if (currentDate.getDay() === 0 || currentDate.getDay() === 6)
+      return 'Am Wochenende gibt es gewöhnlich keine Wettervorhersagen. Dafür gibt es am Freitag eine Wettervorhersage für Samstag und Sonntag.';
+
+    if (latestPost.created.toDateString() === currentDate.toDateString())
+      return 'Die Wettervorhersage ist für Heute aktuell.';
+
+    if (currentDate.getHours() < 8)
+      return 'Für Heute gibt es noch keine Wettervorhersage. Normalerweise schreibe ich sie zwischen 5–7 Uhr.';
+
+    if (currentDate.getHours() < 10)
+      return 'Leider gibt es für Heute noch keine Wettervorhersage. Kann sein, dass ich verschlafen habe oder so … Sorry!';
+
+    return 'Für Heute gibt es leider keine Wettervorhersage. Sorry!';
+  };
+
+  let message = 'Lade …';
+
+  firstPost.subscribe((value) => (message = getMessage(value)));
+</script>
+
+<span>{message}</span>

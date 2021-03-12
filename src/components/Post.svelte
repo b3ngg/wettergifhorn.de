@@ -11,7 +11,7 @@
   import PostHeader from './PostHeader.svelte';
   import Spinner from './Spinner.svelte';
 
-  let visRef;
+  let visRef: any;
 
   let complete: boolean = false;
   export let data: Post;
