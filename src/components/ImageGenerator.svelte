@@ -48,7 +48,7 @@
       })
       .then(async (dataUrl) => {
         var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
+        link.download = data.title + '.jpeg';
         link.href = dataUrl;
         link.click();
 
@@ -63,12 +63,12 @@
     <div class="container">
       <PostCover {...data} />
       <PostHeader {...data} />
-      {#if textLenght < 600}
+      {#if textLenght < 600 || !data.image}
         <PostBody {...data} />
-        <div class="branding">
-          <p>Mehr auf wettergifhorn.de</p>
-        </div>
       {/if}
+      <div class="branding">
+        <p>Mehr auf wettergifhorn.de</p>
+      </div>
     </div>
   </div>
 {:else}
