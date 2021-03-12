@@ -64,6 +64,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
   }
 
   .logo {
@@ -108,6 +109,7 @@
     .flex {
       flex-direction: column;
       justify-content: center;
+      margin: 0;
     }
 
     .text {

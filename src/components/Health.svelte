@@ -35,7 +35,9 @@
   .container {
     width: 100%;
     text-align: center;
-    margin: 0.4rem 0;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
   }
 
   span {
