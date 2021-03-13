@@ -1,4 +1,4 @@
-import { get } from './helper';
+import { get, stringToDate } from './helper';
 import type { Block, CollectionResponse, PageResponse, Post } from './types';
 
 const ENDPOINT = 'https://notion-api.splitbee.io/v1/';
@@ -39,6 +39,7 @@ export const getCollectionAsPosts = async (id: string): Promise<Post[]> => {
           id: item.id,
           title: item['Name'],
           tags: (item['Tags'] as unknown) as string[],
+          date: stringToDate(item['Date']),
         };
       }
     );

@@ -26,7 +26,9 @@
       {#await posts}
         <Spinner />
       {:then value}
-        {#each value as item, i}
+        {#each value.sort(function (a, b) {
+          return b.date.getTime() - a.date.getTime();
+        }) as item, i}
           <Post index={i} data={item} />
         {/each}
       {:catch error}

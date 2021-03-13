@@ -5,6 +5,7 @@ export interface Post {
   id: string;
   title: string;
   tags: string[];
+  date: Date;
   created?: Date;
   icon?: string;
   image?: string;
