@@ -6,8 +6,6 @@
   const getMessage = (latestPost: Post): string => {
     if (latestPost === undefined) return 'Beiträge laden …';
 
-    return 'Ich bin bis zum 23.8.2021 im Urlaub. Bis dahin wird es keine neuen Wettervorhersagen geben.';
-
     const currentDate = new Date();
     if (currentDate.getDay() === 0 || currentDate.getDay() === 6)
       return 'Am Wochenende gibt es gewöhnlich keine Wettervorhersagen. Dafür gibt es am Freitag eine Wettervorhersage für Samstag und Sonntag.';
