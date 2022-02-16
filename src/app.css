@@ -6,11 +6,11 @@
 @layer base {
 	html,
 	body {
-		@apply text-blue antialiased;
+		@apply bg-bleach text-blue antialiased;
 	}
 
 	h1 {
-		@apply text-5xl font-black;
+		@apply text-5xl font-black md:text-6xl;
 	}
 
 	h2 {
