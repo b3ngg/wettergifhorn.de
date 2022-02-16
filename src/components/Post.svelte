@@ -1,57 +1,33 @@
 <script lang="ts">
-  import { firstPost } from './../store';
+	import type { Post } from '$lib/types';
+	import { getRelativeTime } from '$lib/helper';
+	import Box from './Box.svelte';
+	import Tag from './Tag.svelte';
 
-  import Inview from 'svelte-inview';
-  import { addAdditonalDataToPost } from '../api/notion';
-
-  import type { Post } from '../api/types';
-  import PostBody from './PostBody.svelte';
-  import PostCover from './PostCover.svelte';
-  import PostFooter from './PostFooter.svelte';
-  import PostHeader from './PostHeader.svelte';
-  import Spinner from './Spinner.svelte';
-
-  let visRef: any;
-
-  let complete: boolean = false;
-  export let data: Post;
-  export let index: number;
-
-  const addData = async () => {
-    data = await addAdditonalDataToPost(data);
-    complete = true;
-    if (index === 0) firstPost.set(data);
-  };
+	export let post: Post;
 </script>
 
-<div class="container">
-  {#if complete}
-    <PostCover {...data} />
-    <PostHeader {...data} />
-    <PostBody {...data} />
-    <PostFooter {...data} />
-  {:else}
-    <Inview wrapper={visRef} on:enter={addData}>
-      <div bind:this={visRef}>
-        <Spinner />
-      </div>
-    </Inview>
-  {/if}
-</div>
+<Box>
+	<div class="items-center pb-4 md:flex md:space-x-8">
+		<div class="pb-4 text-7xl md:pb-0 md:text-8xl">{post.icon ?? '💬'}</div>
+		<div>
+			<h3 class="pb-4 text-4xl font-black text-gray-800">{post.title}</h3>
+			<div class="flex flex-wrap">
+				{#if post.tags}
+					{#each post.tags as tag}
+						<Tag value={tag} />
+					{/each}
+				{/if}
+			</div>
+		</div>
+	</div>
+	<div class="prose py-6 text-gray-700 md:prose-lg">
+		{#each post.blocks as block}
+			<p>{block.content}</p>
+		{/each}
+	</div>
 
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 4rem 0;
-
-    background: linear-gradient(
-      180deg,
-      var(--c-white) 0%,
-      var(--c-dark-white) 100%
-    );
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.01);
-    border-radius: 10px;
-  }
-</style>
+	<div class="text-gray-500">
+		{getRelativeTime(post.created)}
+	</div>
+</Box>
