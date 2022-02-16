@@ -1,12 +1,40 @@
-This repository contains a new version of wettergifhorn.de. This version focuses more on text-based forecasts.
+# create-svelte
 
-## Tech stack
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-The texts are written, managed and stored in Notion. Via [this](https://github.com/splitbee/notion-api-worker) unofficial API the texts are loaded directly in the frontend. The texts are then rendered with Svelte. This eliminates the need for a backend and allows easy and fast access.
+## Creating a project
 
-## Get started
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-npm install
-npm run dev
+# create a new project in the current directory
+npm init svelte@next
+
+# create a new project in my-app
+npm init svelte@next my-app
 ```
+
+> Note: the `@next` is temporary
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
