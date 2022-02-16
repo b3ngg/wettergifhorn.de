@@ -26,6 +26,14 @@
 	lastPost.set(posts[0]);
 </script>
 
+<svelte:head>
+	<title>Wetter Gifhorn</title>
+	<meta
+		name="description"
+		content="Jeden Tag neue hangemachte Wettervorhersagen für den Landkeis Gifhorn."
+	/>
+</svelte:head>
+
 <div>
 	{#each posts as post}
 		<PostComponent {post} />

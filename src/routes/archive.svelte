@@ -35,6 +35,11 @@
 	lastPost.set(posts[0]);
 </script>
 
+<svelte:head>
+	<title>Wetter Gifhorn - Archive</title>
+	<meta name="description" content="Archiv aller Wettervorhersagen von Wetter Gifhorn." />
+</svelte:head>
+
 <div>
 	{#each posts as post}
 		<PostComponent {post} />
