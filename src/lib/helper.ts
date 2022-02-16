@@ -1,4 +1,9 @@
-import dayjs from 'dayjs/esm/index.js';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import 'dayjs/locale/de';
+
+dayjs.locale('de');
+dayjs.extend(relativeTime);
 
 /**
  * Convert a date string safe to date object
@@ -21,3 +26,5 @@ export const get = async (endpoint: string, uri: string) => {
  * Returns true if the date is on the current day
  */
 export const isToday = (date: Date) => dayjs().isSame(date, 'day');
+
+export const getRelativeTime = (date: Date) => dayjs(date).fromNow();

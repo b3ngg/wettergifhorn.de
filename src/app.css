@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html,
+	body {
+		@apply text-blue antialiased;
+	}
+
+	h1 {
+		@apply text-5xl font-black;
+	}
+
+	h2 {
+		@apply text-4xl font-black;
+	}
+}
