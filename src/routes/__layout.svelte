@@ -5,9 +5,10 @@
 	import State from '$components/State.svelte';
 	import { lastPost } from '$lib/stores';
 	import { navigating } from '$app/stores';
+	import { slide } from 'svelte/transition';
 </script>
 
-<main class="mx-auto max-w-4xl">
+<main class="mx-auto max-w-4xl" transition:slide>
 	<header class="flex flex-col items-center justify-center p-6 text-center">
 		<a href="/">
 			<img src="/logo.svg" alt="Wetter Gifhorn" class="w-96" />

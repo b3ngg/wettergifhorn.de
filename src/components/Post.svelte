@@ -28,6 +28,6 @@
 	</div>
 
 	<div class="text-gray-500">
-		{getRelativeTime(post.date)}
+		{getRelativeTime(post.created)}
 	</div>
 </Box>

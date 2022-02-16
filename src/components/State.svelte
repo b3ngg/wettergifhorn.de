@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isToday } from '$lib/helper';
+	import { isToday, isWeekend } from '$lib/helper';
 
 	import type { Post } from '$lib/types';
 
@@ -7,7 +7,7 @@
 		if (latestPost === undefined) return 'Beiträge laden …';
 
 		const currentDate = new Date();
-		if (currentDate.getDay() === 0 || currentDate.getDay() === 6)
+		if (isWeekend())
 			return 'Am Wochenende gibt es gewöhnlich keine Wettervorhersagen. Dafür gibt es am Freitag eine Wettervorhersage für Samstag und Sonntag.';
 
 		if (isToday(latestPost.date)) return 'Die Wettervorhersage ist für Heute aktuell.';

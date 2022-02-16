@@ -28,3 +28,8 @@ export const get = async (endpoint: string, uri: string) => {
 export const isToday = (date: Date) => dayjs().isSame(date, 'day');
 
 export const getRelativeTime = (date: Date) => dayjs(date).fromNow();
+
+export const isWeekend = () => {
+	const currentDate = new Date();
+	return currentDate.getDay() === 0 || currentDate.getDay() === 6;
+};
