@@ -20,4 +20,7 @@
 	<article class="p-4 py-10" class:animate-pulse={$navigating}>
 		<slot />
 	</article>
+	<footer class="p-4">
+		© Ben Weber {new Date().getFullYear()} – <a href="https://snuna.com"> Website von Snuna </a>
+	</footer>
 </main>
