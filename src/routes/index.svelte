@@ -19,6 +19,7 @@
 	import { lastPost } from '$lib/stores';
 	import Box from '$components/Box.svelte';
 	import { socials } from '$lib/socials';
+	import Button from '$components/Button.svelte';
 
 	export let posts: Post[] = [];
 
@@ -29,6 +30,12 @@
 	{#each posts as post}
 		<PostComponent {post} />
 	{/each}
+</div>
+
+<div class="mb-32">
+	<a href="/archive">
+		<Button>Ältere Beiträge anzeigen</Button>
+	</a>
 </div>
 
 <Box>
@@ -54,7 +61,7 @@
 				<a
 					href={social.link}
 					style:background-color="#{social.hex}"
-					class="my-2 inline-flex items-center rounded-full p-2 px-4 text-white no-underline transition hover:scale-105"
+					class="my-2 inline-flex items-center rounded-full p-2 px-5 text-sm text-white no-underline transition hover:scale-105"
 					target="_blank"
 				>
 					<svg
