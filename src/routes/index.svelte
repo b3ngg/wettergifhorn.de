@@ -30,7 +30,7 @@
 	<title>Wetter Gifhorn</title>
 	<meta
 		name="description"
-		content="Jeden Tag neue hangemachte Wettervorhersagen für den Landkeis Gifhorn."
+		content="Jeden Tag neue handgemachte Wettervorhersagen für den Landkeis Gifhorn."
 	/>
 </svelte:head>
 
