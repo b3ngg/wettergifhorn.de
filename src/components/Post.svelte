@@ -7,7 +7,7 @@
 	export let post: Post;
 </script>
 
-<Box>
+<Box image={post.image}>
 	<div class="items-center pb-4 md:flex md:space-x-8">
 		<div class="pb-4 text-7xl md:pb-0 md:text-8xl">{post.icon ?? '💬'}</div>
 		<div>
