@@ -8,11 +8,16 @@
 </script>
 
 <main class="container mx-auto" transition:slide>
-	<header class="flex flex-col items-center justify-center p-6 text-center">
+	<header
+		class="mx-auto flex max-w-4xl flex-col items-center justify-around p-6 text-center md:flex-row md:text-left"
+	>
 		<a href="/">
-			<img src="/logo.svg" alt="Wetter Gifhorn" class="w-96" />
+			<img src="/logo.svg" alt="Wetter Gifhorn" class="w-60" />
 		</a>
-		<h1>Wetter Gifhorn</h1>
+		<div class="">
+			<h1 class="pb-2">Wetter Gifhorn</h1>
+			<p>Täglich neue handgemachte Wettervorhersagen für den Landkreis Gifhorn!</p>
+		</div>
 	</header>
 
 	<div
