@@ -16,8 +16,8 @@
 <script lang="ts">
 	import type { Post } from '$lib/types';
 	import PostComponent from '$components/Post.svelte';
-	import { lastPost } from '$lib/stores';
 	import Button from '$components/Button.svelte';
+	import Box from '$components/Box.svelte';
 
 	export let posts: Post[] = [];
 
@@ -32,7 +32,6 @@
 
 	let pagination: number = 16;
 	let loading: boolean = false;
-	lastPost.set(posts[0]);
 </script>
 
 <svelte:head>
@@ -41,6 +40,12 @@
 </svelte:head>
 
 <div>
+	<Box>
+		<h2>Archiv</h2>
+		<a href="/" class="my-4">
+			<Button>Zurück zur Startseite</Button>
+		</a>
+	</Box>
 	{#each posts as post}
 		<PostComponent {post} />
 	{/each}

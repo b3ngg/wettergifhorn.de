@@ -10,20 +10,20 @@
 		if (isWeekend())
 			return 'Am Wochenende gibt es gewöhnlich keine Wettervorhersagen. Dafür gibt es am Freitag eine Wettervorhersage für Samstag und Sonntag.';
 
-		if (isToday(latestPost.date)) return 'Die Wettervorhersage ist für Heute aktuell.';
+		if (isToday(latestPost.date)) return 'Die Wettervorhersage ist für heute aktuell.';
 
 		if (currentDate.getHours() < 8)
-			return 'Für Heute gibt es noch keine Wettervorhersage. Normalerweise schreibe ich sie zwischen 6 und 8 Uhr.';
+			return 'Für heute gibt es noch keine Wettervorhersage. Normalerweise schreibe ich sie zwischen 6 und 8 Uhr.';
 
 		if (currentDate.getHours() < 10)
-			return 'Leider gibt es für Heute noch keine Wettervorhersage. Kann sein, dass ich verschlafen habe oder so … Sorry!';
+			return 'Leider gibt es für heute noch keine Wettervorhersage. Kann sein, dass ich verschlafen habe oder so … Sorry!';
 
-		return 'Für Heute gibt es leider keine Wettervorhersage. Sorry!';
+		return 'Für heute gibt es leider keine Wettervorhersage. Sorry!';
 	};
 
 	export let post: Post;
 </script>
 
 {#if post}
-	<p class="p-1 text-blue">{getMessage(post)}</p>
+	<p class="py-1 text-lg text-blue">{getMessage(post)}</p>
 {/if}

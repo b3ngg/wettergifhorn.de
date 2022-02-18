@@ -27,7 +27,7 @@
 				<a
 					href={social.link}
 					style:background-color="#{social.hex}"
-					class="my-2 inline-flex items-center rounded-full p-2 px-5 text-sm font-bold text-white no-underline transition hover:scale-105"
+					class="my-2 inline-flex items-center rounded-md p-2 px-3 text-sm font-bold text-white no-underline transition hover:scale-105"
 					target="_blank"
 				>
 					<svg

@@ -16,12 +16,11 @@
 <script lang="ts">
 	import PostComponent from '$components/Post.svelte';
 	import type { Post } from '$lib/types';
-	import { lastPost } from '$lib/stores';
 	import Button from '$components/Button.svelte';
+	import Box from '$components/Box.svelte';
+	import State from '$components/State.svelte';
 
 	export let posts: Post[] = [];
-
-	lastPost.set(posts[0]);
 </script>
 
 <svelte:head>
@@ -32,16 +31,19 @@
 	/>
 </svelte:head>
 
-<article>
-	<div>
-		{#each posts as post}
-			<PostComponent {post} />
-		{/each}
-	</div>
+<Box>
+	<h2>Die neusten Beiträge</h2>
+	<State post={posts[0]} />
+</Box>
 
-	<div class="mb-32">
-		<a href="/archive">
-			<Button>Ältere Beiträge anzeigen</Button>
-		</a>
-	</div>
-</article>
+<div>
+	{#each posts as post}
+		<PostComponent {post} />
+	{/each}
+</div>
+
+<div class="mb-32">
+	<a href="/archive">
+		<Button>Ältere Beiträge anzeigen</Button>
+	</a>
+</div>

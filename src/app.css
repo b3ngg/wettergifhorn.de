@@ -14,6 +14,6 @@
 	}
 
 	h2 {
-		@apply text-4xl font-black;
+		@apply text-4xl font-black text-gray-800;
 	}
 }
