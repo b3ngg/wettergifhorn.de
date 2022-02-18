@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ fetch }) => {
-		const response = await fetch('/api/posts');
+		const response = await fetch(`/api/posts?start=${4}&end=${16}`);
 		const json = await response.json();
 
 		return {
@@ -30,7 +30,7 @@
 		pagination += 10;
 	};
 
-	let pagination: number = 10;
+	let pagination: number = 16;
 	let loading: boolean = false;
 	lastPost.set(posts[0]);
 </script>
