@@ -2,25 +2,37 @@
 	import '../app.css';
 	import '@fontsource/lato/400.css';
 	import '@fontsource/lato/900.css';
-	import State from '$components/State.svelte';
-	import { lastPost } from '$lib/stores';
 	import { navigating } from '$app/stores';
 	import { slide } from 'svelte/transition';
+	import About from './_About.svelte';
 </script>
 
-<main class="mx-auto max-w-4xl" transition:slide>
-	<header class="flex flex-col items-center justify-center p-6 text-center">
+<main class="container mx-auto" transition:slide>
+	<header
+		class="mx-auto flex max-w-4xl flex-col items-center justify-around p-6 text-center md:flex-row md:text-left"
+	>
 		<a href="/">
-			<img src="/logo.svg" alt="Wetter Gifhorn" class="w-96" />
+			<img src="/logo.svg" alt="Wetter Gifhorn" class="w-60" />
 		</a>
-		<h1>Wetter Gifhorn</h1>
-		<State post={$lastPost} />
+		<div class="">
+			<h1 class="pb-2">Wetter Gifhorn</h1>
+			<p>Täglich neue handgemachte Wettervorhersagen für den Landkreis Gifhorn!</p>
+		</div>
 	</header>
 
-	<article class="p-4 py-10" class:animate-pulse={$navigating}>
-		<slot />
-	</article>
-	<footer class="p-4">
+	<div
+		class="w-full justify-around p-4 py-10 md:flex md:space-x-12"
+		class:animate-pulse={$navigating}
+	>
+		<article class="flex-grow">
+			<slot />
+		</article>
+
+		<aside>
+			<About />
+		</aside>
+	</div>
+	<footer class="p-6">
 		© Ben Weber {new Date().getFullYear()} – <a href="https://snuna.com"> Website von Snuna </a>
 	</footer>
 </main>
