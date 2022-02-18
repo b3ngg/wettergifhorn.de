@@ -6,7 +6,7 @@
 <div class="prose text-gray-800 md:prose-lg">
 	<Box>
 		<h2>Über Wetter Gifhorn</h2>
-		<img src="ben_weber.jpeg" alt="Ben Weber" class="rounded-xl" />
+		<img src="ben_weber.webp" alt="Ben Weber" class="rounded-xl" />
 		<h3>Hey ich bin Ben!</h3>
 		<p>
 			Seit ein paar Jahren nun betreibe ich „Wetter Gifhorn“ als Hobby und schreibe
