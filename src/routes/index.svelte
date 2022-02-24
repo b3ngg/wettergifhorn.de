@@ -43,7 +43,7 @@
 </div>
 
 <div class="mb-32">
-	<a href="/archive">
+	<a href="/archive" rel="external">
 		<Button>Ältere Beiträge anzeigen</Button>
 	</a>
 </div>
