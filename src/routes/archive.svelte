@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ fetch }) => {
-		const response = await fetch(`/api/posts?start=${4}&end=${16}`);
+		const response = await fetch(`/api/posts?start=${4}&end=${100}`);
 		const json = await response.json();
 
 		return {
@@ -20,18 +20,6 @@
 	import Box from '$components/Box.svelte';
 
 	export let posts: Post[] = [];
-
-	const loadMore = async () => {
-		loading = true;
-		const response = await fetch(`/api/posts?start=${pagination}&end=${pagination + 10}`);
-		const newPosts = await response.json();
-		posts = [...posts, ...newPosts.posts];
-		loading = false;
-		pagination += 10;
-	};
-
-	let pagination: number = 16;
-	let loading: boolean = false;
 </script>
 
 <svelte:head>
@@ -50,7 +38,5 @@
 		<PostComponent {post} />
 	{/each}
 
-	<div on:click={loadMore} class:animate-pulse={loading}>
-		<Button>Mehr laden</Button>
-	</div>
+	<p>Weiter zurückliegende Wettervorhersagen auf Anfrage.</p>
 </div>
