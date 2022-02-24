@@ -18,7 +18,11 @@ export const stringToDate = (string: string): Date => {
  * Fetch a URL and return the response
  */
 export const get = async (endpoint: string, uri: string) => {
-	const res = await fetch(endpoint + uri);
+	const res = await fetch(endpoint + uri, {
+		headers: {
+			'Cache-Control': 'no-cache'
+		}
+	});
 	return await res.json();
 };
 
