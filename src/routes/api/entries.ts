@@ -4,7 +4,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 export const get: RequestHandler = async () => {
 	return {
 		body: {
-			entries: (await getCollectionAsPosts('d85f75983c61439a87f132323a409d0d')) as never
+			entries: (await getCollectionAsPosts('e97b96a82dd64cfeac1ae43f4314e194')) as never
 		}
 	};
 };
